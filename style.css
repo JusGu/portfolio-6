@@ -27,6 +27,7 @@ body {
     position: sticky;
     background-color: white;
     top: 0;
+    padding-bottom: 16px;
   }
     
   .visible {
