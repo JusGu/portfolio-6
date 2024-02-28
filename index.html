@@ -26,22 +26,24 @@
         <input type="radio" name="time" value="most" />
         <label>2 minutes</label>
       </div>
+      <div id="firstSection">
+        <p>
+          I'm passionate about building bridges between people and the things
+          they want.
+        </p>
+        <p>
+          Currently, I'm studying Computer Science at the University of Waterloo
+          and building
+          <a href="https://uwclubs.com" target="_blank">UWClubs</a> to bridge
+          the gap between students and community events.
+        </p>
+        <p>
+          You can find what I've been up to using the links above, or if you
+          have more time, click the button below.
+        </p>
+        <button id="btnMedium">What I'm up to</button>
+      </div>
 
-      <p>
-        I'm passionate about building bridges between people and the things they
-        want.
-      </p>
-      <p>
-        Currently, I'm studying Computer Science at the University of Waterloo
-        and building
-        <a href="https://uwclubs.com" target="_blank">UWClubs</a> to bridge the
-        gap between students and community events.
-      </p>
-      <p>
-        You can find what I've been up to using the links above, or if you have
-        more time, click the button below.
-      </p>
-      <button id="firstButton">What I'm up to</button>
       <div id="secondText" class="invisible">
         <p>
           Professionally I'm a software developer. I'm immensely grateful to
@@ -58,7 +60,7 @@
           To find out what I've been up to recently, check out my
           <a href="https://twitter.com/jjwgu">Twitter.</a>
         </p>
-        <button>My Past & My Future</button>
+        <button id="btnMost">My Past & My Future</button>
       </div>
       <div id="third" class="invisible">
         <p>
@@ -77,7 +79,7 @@
           sail, they taught me something fair more important: the value of
           kindness and integrity.
         </p>
-        <p>Let's talk about the future, my goal for 2024 is to:</p>
+        <p>Let's talk about the future, my goal for 2024 is:</p>
         <ul>
           <li>
             Onboard <b>100 communities</b> to a
@@ -93,39 +95,52 @@
         </p>
       </div>
 
-      <p>Fun Fact:</p>
     </div>
     <script>
-        const radios = document.querySelectorAll('input[type="radio"][name="time"]');
-        const firstSection = document.getElementById("firstSection");
-        const secondText = document.getElementById("secondText");
-        const third = document.getElementById("third");
-    
-        function updateVisibility() {
-          const selectedValue = document.querySelector('input[name="time"]:checked').value;
-          switch (selectedValue) {
-            case "less":
-              firstSection.classList.remove("invisible");
-              secondText.classList.add("invisible");
-              third.classList.add("invisible");
-              break;
-            case "medium":
-              firstSection.classList.remove("invisible");
-              secondText.classList.remove("invisible");
-              third.classList.add("invisible");
-              break;
-            case "most":
-              firstSection.classList.remove("invisible");
-              secondText.classList.remove("invisible");
-              third.classList.remove("invisible");
-              break;
-          }
+      const radios = document.querySelectorAll(
+        'input[type="radio"][name="time"]'
+      );
+      const firstSection = document.getElementById("firstSection");
+      const secondText = document.getElementById("secondText");
+      const third = document.getElementById("third");
+      const btnMedium = document.getElementById("btnMedium");
+      const btnMost = document.getElementById("btnMost");
+
+      function updateVisibility(selectedValue = null) {
+        if (!selectedValue) {
+          selectedValue = document.querySelector(
+            'input[name="time"]:checked'
+          ).value;
         }
-    
-        radios.forEach(radio => radio.addEventListener('change', updateVisibility));
-    
-        // Initialize visibility based on the default checked radio button
-        updateVisibility();
-      </script>
+        switch (selectedValue) {
+          case "less":
+            firstSection.classList.remove("invisible");
+            secondText.classList.add("invisible");
+            third.classList.add("invisible");
+            break;
+          case "medium":
+            firstSection.classList.remove("invisible");
+            secondText.classList.remove("invisible");
+            third.classList.add("invisible");
+            break;
+          case "most":
+            firstSection.classList.remove("invisible");
+            secondText.classList.remove("invisible");
+            third.classList.remove("invisible");
+            break;
+        }
+      }
+
+      radios.forEach((radio) =>
+        radio.addEventListener("change", () => updateVisibility())
+      );
+
+      // Button event listeners
+      btnMedium.addEventListener("click", () => updateVisibility("medium"));
+      btnMost.addEventListener("click", () => updateVisibility("most"));
+
+      // Initialize visibility based on the default checked radio button
+      updateVisibility();
+    </script>
   </body>
 </html>
