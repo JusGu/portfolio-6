@@ -18,12 +18,15 @@
       </div>
       <h1>Welcome! I'm Justin.</h1>
       <h3>The world is a busy place - how much free time do you have?</h3>
-      <input type="radio" value="less" checked="true" />
-      <label>15 seconds</label>
-      <input type="radio" value="medium" />
-      <label>A minute</label>
-      <input type="radio" value="most" />
-      <label>2 minutes</label>
+      <div class="navbar">
+        <input type="radio" name="time" value="less" checked="true" />
+        <label>15 seconds</label>
+        <input type="radio" name="time" value="medium" />
+        <label>A minute</label>
+        <input type="radio" name="time" value="most" />
+        <label>2 minutes</label>
+      </div>
+
       <p>
         I'm passionate about building bridges between people and the things they
         want.
@@ -93,15 +96,36 @@
       <p>Fun Fact:</p>
     </div>
     <script>
-      const firstButton = document.getElementById("firstButton");
-      const secondText = document.getElementById("secondText");
-      console.log(secondText);
-
-      function showSecond() {
-        secondText.className.replace("visible");
-        console.log("HI");
-      }
-      firstButton.onclick = showSecond();
-    </script>
+        const radios = document.querySelectorAll('input[type="radio"][name="time"]');
+        const firstSection = document.getElementById("firstSection");
+        const secondText = document.getElementById("secondText");
+        const third = document.getElementById("third");
+    
+        function updateVisibility() {
+          const selectedValue = document.querySelector('input[name="time"]:checked').value;
+          switch (selectedValue) {
+            case "less":
+              firstSection.classList.remove("invisible");
+              secondText.classList.add("invisible");
+              third.classList.add("invisible");
+              break;
+            case "medium":
+              firstSection.classList.remove("invisible");
+              secondText.classList.remove("invisible");
+              third.classList.add("invisible");
+              break;
+            case "most":
+              firstSection.classList.remove("invisible");
+              secondText.classList.remove("invisible");
+              third.classList.remove("invisible");
+              break;
+          }
+        }
+    
+        radios.forEach(radio => radio.addEventListener('change', updateVisibility));
+    
+        // Initialize visibility based on the default checked radio button
+        updateVisibility();
+      </script>
   </body>
 </html>
