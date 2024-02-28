@@ -94,7 +94,6 @@
           Justin
         </p>
       </div>
-
     </div>
     <script>
       const radios = document.querySelectorAll(
@@ -111,6 +110,11 @@
           selectedValue = document.querySelector(
             'input[name="time"]:checked'
           ).value;
+        } else {
+          // Update the radio button's checked property based on the button click
+          document.querySelector(
+            `input[name="time"][value="${selectedValue}"]`
+          ).checked = true;
         }
         switch (selectedValue) {
           case "less":
