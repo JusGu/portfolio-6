@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link href="normalize.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <a>Resume</a>
+        <a>Github</a>
+        <a>Twitter</a>
+        <a>Email</a>
+      </div>
+      <h1>Welcome! I'm Justin.</h1>
+      <h3>The world is a busy place - how much free time do you have?</h3>
+      <input type="radio" value="less" checked="true" />
+      <label>15 seconds</label>
+      <input type="radio" value="medium" />
+      <label>A minute</label>
+      <input type="radio" value="most" />
+      <label>2 minutes</label>
+      <p>
+        I'm passionate about building bridges between people and the things they
+        want.
+      </p>
+      <p>
+        Currently, I'm studying Computer Science at the University of Waterloo
+        and building
+        <a href="https://uwclubs.com" target="_blank">UWClubs</a> to bridge the
+        gap between students and community events.
+      </p>
+      <p>
+        You can find what I've been up to using the links above, or if you have
+        more time, click the button below.
+      </p>
+      <button id="firstButton">What I'm up to</button>
+      <div id="secondText" class="invisible">
+        <p>
+          Professionally I'm a software developer. I'm immensely grateful to
+          have worked with my colleagues and proud of the work we've done. To
+          know more, check out my <a href="./resume">resume.</a>
+        </p>
+        <p>
+          My personal projects will give you an understanding of what I'm
+          interested in much better than anything I could write. They can be
+          found on my
+          <a href="https://github.com/jusgu">GitHub.</a>
+        </p>
+        <p>
+          To find out what I've been up to recently, check out my
+          <a href="https://twitter.com/jjwgu">Twitter.</a>
+        </p>
+        <button>My Past & My Future</button>
+      </div>
+      <div id="third" class="invisible">
+        <p>
+          Before I wrote my first line of code, I was inspired by the graphic
+          designs of Malika Favre, Fugs, and LH. These people taught me to see
+          the beauty in anything and everything - no matter how small.
+          <!-- To see my
+        personal works, check out my design archive. I've recently picked up a
+        vintage Polaroid from the 80s and have begun documenting my life with it:
+        check it out here. -->
+        </p>
+        <p>
+          Further back, before I created my first piece of graphic design, I
+          developed a great fondness for the outdoors thanks to my friends at
+          Scouts Canada. Not only did they teach me how to kayak, canoe and
+          sail, they taught me something fair more important: the value of
+          kindness and integrity.
+        </p>
+        <p>Let's talk about the future, my goal for 2024 is to:</p>
+        <ul>
+          <li>
+            Onboard <b>100 communities</b> to a
+            <a href="https://uwclubs.com" target="_blank"
+              >centralized website</a
+            >
+            so students can easily find exciting events more easily
+          </li>
+        </ul>
+        <p>
+          Bye for now, <br /><br />
+          Justin
+        </p>
+      </div>
+
+      <p>Fun Fact:</p>
+    </div>
+    <script>
+      const firstButton = document.getElementById("firstButton");
+      const secondText = document.getElementById("secondText");
+      console.log(secondText);
+
+      function showSecond() {
+        secondText.className.replace("visible");
+        console.log("HI");
+      }
+      firstButton.onclick = showSecond();
+    </script>
+  </body>
+</html>
