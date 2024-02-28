@@ -22,9 +22,13 @@ body {
     gap: 1rem;
     overflow: hidden;
     white-space: nowrap;
-    position: fixed;
+  }
+  .sticky {
+    position: sticky;
+    background-color: white;
     top: 0;
   }
+    
   .visible {
     display: block;
   }
