@@ -113,7 +113,6 @@
             'input[name="time"]:checked'
           ).value;
         } else {
-          // Update the radio button's checked property based on the button click
           document.querySelector(
             `input[name="time"][value="${selectedValue}"]`
           ).checked = true;
@@ -141,11 +140,9 @@
         radio.addEventListener("change", () => updateVisibility())
       );
 
-      // Button event listeners
       btnMedium.addEventListener("click", () => updateVisibility("medium"));
       btnMost.addEventListener("click", () => updateVisibility("most"));
 
-      // Initialize visibility based on the default checked radio button
       updateVisibility();
     </script>
   </body>
