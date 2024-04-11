@@ -13,6 +13,8 @@
   <body>
     <div class="container">
       <div class="navbar sticky">
+        <div class="navbar-content">
+
         <a href="./">
           <image src="./logo.png" class="logo" alt="Logo" />
         </a>
@@ -23,117 +25,75 @@
           <a href="mailto:jjwgu@uwaterloo.ca">Email</a>
         </nav>
       </div>
-      <h1>Welcome! I'm Justin.</h1>
-      <div id="firstSection">
-        <p>
-          I'm passionate about building bridges between people and the things
-          they want.
-        </p>
-        <p>
-          Currently, I'm studying Computer Science at the University of Waterloo
-          and building
-          <a href="https://uwclubs.com" target="_blank">UWClubs</a> to bridge
-          the gap between students and community events.
-        </p>
-        <p>
-          You can find what I've been up to using the links above, or if you
-          have more time, click the button below.
-        </p>
-        <button id="btnMedium">What I'm up to</button>
-      </div>
 
-      <div id="secondText" class="invisible">
-        <p>
-          Professionally I'm a software developer. I'm immensely grateful to
-          have worked with my colleagues and proud of the work we've done. To
-          know more, check out my <a href="./resume.pdf">Resume</a>.
-        </p>
-        <p>
-          My personal projects will give you an understanding of what I'm
-          interested in much better than anything I could write. They can be
-          found on my
-          <a href="https://github.com/jusgu">GitHub</a>.
-        </p>
-        <p>
-          To find out what I've been up to recently, check out my
-          <a href="https://twitter.com/jjwgu">Twitter</a>.
-        </p>
-        <button id="btnMost">My Past & My Future</button>
       </div>
-      <div id="third" class="invisible">
-        <p>
-          Before I wrote my first line of code, I was inspired by the graphic
-          designs of
-          <a href="https://www.malikafavre.com" target="_blank">Malika Favre</a
-          >,
-          <a
-            href="https://en.m.wikipedia.org/wiki/Lawren_Harris"
-            target="_blank"
-            >Lawren Harris</a
-          >, and
-          <a href="https://dribbble.com/Fugstrator" target="_blank"
-            >Michael Fugoso</a
-          >. These people taught me to see the beauty in anything and
-          everything—no matter how small.
-          <!-- To see my
+      <h1 class="title">Welcome! I'm Justin.</h1>
+      <h2>About Me</h2>
+      <p>
+        I'm passionate about building bridges between people and the things they
+        want.
+      </p>
+      <p>
+        Currently, I'm studying Computer Science at the University of Waterloo
+        and building
+        <a href="https://uwclubs.com" target="_blank">UWClubs</a> to bridge the
+        gap between students and community events.
+      </p>
+      <h2>What I'm up to</h2>
+      <p>
+        Professionally I'm a software developer. I'm immensely grateful to have
+        worked with my colleagues and proud of the work we've done. To know
+        more, check out my <a href="./resume.pdf">Resume</a>.
+      </p>
+      <p>
+        My personal projects will give you an understanding of what I'm
+        interested in much better than anything I could write. They can be found
+        on my
+        <a href="https://github.com/jusgu">GitHub</a>.
+      </p>
+      <p>
+        To find out what I've been up to recently, check out my
+        <a href="https://twitter.com/jjwgu">Twitter</a>.
+      </p>
+      <h2>My Past & My Future</h2>
+      <p>
+        Before I wrote my first line of code, I was inspired by the graphic
+        designs of
+        <a href="https://www.malikafavre.com" target="_blank">Malika Favre</a>,
+        <a href="https://en.m.wikipedia.org/wiki/Lawren_Harris" target="_blank"
+          >Lawren Harris</a
+        >, and
+        <a href="https://dribbble.com/Fugstrator" target="_blank"
+          >Michael Fugoso</a
+        >. These people taught me to see the beauty in anything and
+        everything—no matter how small.
+        <!-- To see my
         personal works, check out my design archive. I've recently picked up a
         vintage Polaroid from the 80s and have begun documenting my life with it:
         check it out here. -->
+      </p>
+      <p>
+        Further back, before I created my first piece of graphic design, I
+        developed a great fondness for the outdoors thanks to my friends at
+        Scouts Canada. Not only did they teach me how to kayak, canoe and sail,
+        they taught me something far more important: the value of kindness and
+        integrity.
+      </p>
+      <p>Let's talk about the future, my goal for 2024 is:</p>
+      <ul>
+        <li>
+          Onboard <b>100 communities</b> to a
+          <a href="https://uwclubs.com" target="_blank">centralized website</a>
+          so students can easily find exciting events more easily
+        </li>
+      </ul>
+      <p>
+        that's it from me—thanks for stopping by.
         </p>
         <p>
-          Further back, before I created my first piece of graphic design, I
-          developed a great fondness for the outdoors thanks to my friends at
-          Scouts Canada. Not only did they teach me how to kayak, canoe and
-          sail, they taught me something far more important: the value of
-          kindness and integrity.
+        - justin
         </p>
-        <p>Let's talk about the future, my goal for 2024 is:</p>
-        <ul>
-          <li>
-            Onboard <b>100 communities</b> to a
-            <a href="https://uwclubs.com" target="_blank"
-              >centralized website</a
-            >
-            so students can easily find exciting events more easily
-          </li>
-        </ul>
-        <p>
-          Bye for now, <br /><br />
-          Justin
-        </p>
-      </div>
+      </p>
     </div>
-    <script>
-      const firstSection = document.getElementById("firstSection");
-      const secondText = document.getElementById("secondText");
-      const third = document.getElementById("third");
-      const btnMedium = document.getElementById("btnMedium");
-      const btnMost = document.getElementById("btnMost");
-
-      function updateVisibility(selectedValue = null) {
-        switch (selectedValue) {
-          case "less":
-            firstSection.classList.remove("invisible");
-            secondText.classList.add("invisible");
-            third.classList.add("invisible");
-            break;
-          case "medium":
-            firstSection.classList.remove("invisible");
-            secondText.classList.remove("invisible");
-            third.classList.add("invisible");
-            break;
-          case "most":
-            firstSection.classList.remove("invisible");
-            secondText.classList.remove("invisible");
-            third.classList.remove("invisible");
-            break;
-        }
-      }
-
-      btnMedium.addEventListener("click", () => updateVisibility("medium"));
-      btnMost.addEventListener("click", () => updateVisibility("most"));
-
-      updateVisibility();
-    </script>
   </body>
 </html>
