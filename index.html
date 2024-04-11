@@ -14,18 +14,9 @@
         <a href="./resume.pdf" target="_blank">Resume</a>
         <a href="https://github.com/jusgu" target="_blank">Github</a>
         <a href="https://twitter.com/jjwgu" target="_blank">Twitter</a>
-        <a href="mailto:jjwgu@uwaterloo.ca" target="_blank">Email</a>
+        <a href="mailto:jjwgu@uwaterloo.ca">jjwgu [at] uwaterloo [.] ca</a>
       </div>
       <h1>Welcome! I'm Justin.</h1>
-      <h3>The world is a busy place—how much free time do you have?</h3>
-      <div class="navbar">
-        <input type="radio" name="time" value="less" checked="true" />
-        <label>15 seconds</label>
-        <input type="radio" name="time" value="medium" />
-        <label>A minute</label>
-        <input type="radio" name="time" value="most" />
-        <label>2 minutes</label>
-      </div>
       <div id="firstSection">
         <p>
           I'm passionate about building bridges between people and the things
@@ -98,9 +89,6 @@
       </div>
     </div>
     <script>
-      const radios = document.querySelectorAll(
-        'input[type="radio"][name="time"]'
-      );
       const firstSection = document.getElementById("firstSection");
       const secondText = document.getElementById("secondText");
       const third = document.getElementById("third");
@@ -108,15 +96,6 @@
       const btnMost = document.getElementById("btnMost");
 
       function updateVisibility(selectedValue = null) {
-        if (!selectedValue) {
-          selectedValue = document.querySelector(
-            'input[name="time"]:checked'
-          ).value;
-        } else {
-          document.querySelector(
-            `input[name="time"][value="${selectedValue}"]`
-          ).checked = true;
-        }
         switch (selectedValue) {
           case "less":
             firstSection.classList.remove("invisible");
@@ -135,10 +114,6 @@
             break;
         }
       }
-
-      radios.forEach((radio) =>
-        radio.addEventListener("change", () => updateVisibility())
-      );
 
       btnMedium.addEventListener("click", () => updateVisibility("medium"));
       btnMost.addEventListener("click", () => updateVisibility("most"));
