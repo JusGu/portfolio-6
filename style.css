@@ -5,6 +5,7 @@ body {
   display: flex;
   justify-content: center;
   background-color: white;
+  color: rgb(36, 36, 36);
 }
 
 .container {
@@ -24,19 +25,23 @@ body {
 }
 
 .container > p {
-  line-height: 28px;
-  font-size: 18px;
+  line-height: 32px;
+  font-size: 20px;
+  margin-top: 42px;
+  font-family: "Georgia", "Times New Roman", serif;
 }
 
 .container > h2 {
   margin-top: 46px;
-  margin-bottom: 0px;
-  line-height: 24px;
+  margin-bottom: -24px;
+  font-size: 24px;
+  line-height: 30px;
 }
 
 .container * li {
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 20px;
+  line-height: 32px;
+  font-family: "Georgia", "Times New Roman", serif;
 }
 
 .navbar {
@@ -56,10 +61,36 @@ body {
 
 .title {
   margin-top: calc(
-    84px + 32px
+    84px + 48px
   ); /* This is a hack to make the title appear below the sticky navbar, navbar height is 84px */
-  margin-bottom: 24px;
+  margin-bottom: -14px;
   line-height: 38px;
+}
+
+@media (max-width: 600px) {
+  .title {
+    margin-top: calc(
+      84px + 32px
+    ); /* This is a hack to make the title appear below the sticky navbar, navbar height is 84px */
+    margin-bottom: 24px;
+  }
+  .container > h2 {
+    margin-top: 24px;
+    font-size: 20px;
+    margin-bottom: -12px;
+    line-height: 24px;
+  }
+
+  .container > p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .container * li {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
 }
 
 .sticky {
@@ -72,7 +103,7 @@ body {
   padding-right: 1em;
   padding-top: 16px;
   padding-bottom: 16px;
-  border-bottom: 1px solid #666666;
+  border-bottom: 1px solid #8e8e8e;
 }
 
 .visible {
