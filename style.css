@@ -28,6 +28,7 @@ body {
   line-height: 32px;
   font-size: 20px;
   margin-top: 42px;
+  margin-bottom: -8px;
   font-family: "Georgia", "Times New Roman", serif;
 }
 
@@ -38,9 +39,17 @@ body {
   line-height: 30px;
 }
 
+.container > img {
+  width: calc(100% - 80px);
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 56px;
+}
+
 .container * li {
   font-size: 20px;
   line-height: 32px;
+
   font-family: "Georgia", "Times New Roman", serif;
 }
 
@@ -61,16 +70,29 @@ body {
 
 .title {
   margin-top: calc(
-    84px + 48px
+    52px + 48px
   ); /* This is a hack to make the title appear below the sticky navbar, navbar height is 84px */
   margin-bottom: -14px;
   line-height: 38px;
 }
 
+.sticky {
+  position: fixed;
+  background-color: white;
+  top: 0;
+  left: 0;
+  width: calc(100vw - 2em);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 4px;
+  padding-bottom: 0px;
+  border-bottom: 1px solid #8e8e8e;
+}
+
 @media (max-width: 600px) {
   .title {
     margin-top: calc(
-      84px + 32px
+      52px + 32px
     ); /* This is a hack to make the title appear below the sticky navbar, navbar height is 84px */
     margin-bottom: 24px;
   }
@@ -87,24 +109,22 @@ body {
     line-height: 28px;
   }
 
+  .container > img {
+    margin-top: 40px;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+  }
+
   .container * li {
     font-size: 18px;
     line-height: 28px;
   }
 
-}
-
-.sticky {
-  position: fixed;
-  background-color: white;
-  top: 0;
-  left: 0;
-  width: calc(100vw - 2em);
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid #8e8e8e;
+  .sticky {
+    padding-top: 4px;
+    padding-bottom: 0px;
+  }
 }
 
 .visible {
