@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/jusgu
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://justingu.ca
+  * I am jusgu (https://keybase.io/jusgu) on keybase.
+  * I have a public key with fingerprint 8308 6428 2BDD 2884 6DC9  44F8 D90C CDD7 1EFA 57A2
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01010e18e3bc82a6d6e8c55cbd3ce98516765cadc8b789017774dc21f3644792479b0a",
+      "fingerprint": "830864282bdd28846dc944f8d90ccdd71efa57a2",
+      "host": "keybase.io",
+      "key_id": "d90ccdd71efa57a2",
+      "kid": "01010e18e3bc82a6d6e8c55cbd3ce98516765cadc8b789017774dc21f3644792479b0a",
+      "uid": "6e2313727b316ad0300f83faca8b4f19",
+      "username": "jusgu"
+    },
+    "service": {
+      "hostname": "justingu.ca",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1713128396,
+  "expire_in": 157680000,
+  "prev": "f3da769510a08275b9a5ca9eb1969d19e326ab7d612ad81b0f20f820dd4ad1a7",
+  "seqno": 9,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMItAnicrVJbbExBGN5FW6rYEJeHDXXS8mDVmXPOnjNnBY1qSMqDW1sp3c6ZmbM9
+unbX7tm6rG1Sl4g0JbHiQYK0SolS1whSZVPaKBqXhMeGiCYVl8o2WBJzGuLFo5lM
+JvP/3/f93/9nuiaMtmXbe29eb4p1pubZe+8lojbdWfQoxmlBsoPzxLgaOnJRP6ER
+01tjEM7D8YBtCiAVNQwFJBOZQux2Y42ImKrQDWRFdmNEMNQUqPJAURSJYAHooixJ
+iiqwo/GIc3G6EfDRcChsBEwmC0UeypIABY0QAUJJJliVJB0SlceYEAVQHbkVJDBi
+dTBiMZg5DUVogRFkMfbwjtj7B/4/+46OyMlUEIGoCIomAhkRXuR5HYo6wghqkg5U
+Cxih4QDaQhl6czTii3JxF8dCtQam1lStNv6mTTaNaAG2CoTCQTOIg36WqDbNUMRj
+Ec0dIQu5jWre3xpezQgQxmKMWhqOGMEA5wEMiU3DEgUKEIEARVV2cXR7yAhTr2Eh
+3IoMebasOrSWSeoiQYqsugGPeCgobk1FbA4q1YAqqwSoVBRkpClEBgIiEGi8LrBW
+BZ4QCRGAFM7qamsgyHlUZhP5mGTE8AWQGQ1TLp68u3GMzZ5ty8wYZf0tW/Y4x58f
+9+5oVjpjhb3l69rGYcfWq5+cjnTeh3Yu90V+MY5+efGj/fyR+975B0sr2kOLMwf1
+8lznyeMTnSjff/VjoiHW+vlZ//ihGfNSbXc2rTogNe76jrum9pwu73zwPc+x+OfF
+g5cPz/V8w+8fF/cvfIpL65fbq4of1e1PPpOrX7YNPLl1cVHsStG+mdv6EguO+Y3b
+HWO6D1ccX/G+qg/XTTlTviH+ZnZhU8nZzfknK1Hd/DPPP8Ved7/aO5BTM9hbtjCV
+XNszsTXr6bBZQScdmrXUbG5eOTS8Jzb27YlxLddKpmeee7B6d5pbEk+8e7hu2Y3C
+NZ/LLkxumJM6lVPp6k+G1qcvDdW/7QjtPDbtF8vWRtY=
+=2zFk
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jusgu
+
+==================================================================
