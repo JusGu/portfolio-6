@@ -1,0 +1,27 @@
+<div>
+    <h2>Internships</h2>
+    <ul id="internshipList"></ul>
+</div>
+<script>
+    const internships = [
+        {
+            title: "Strawberry Internship"
+        },
+        {
+            title: "Blueberry Internship"
+        }
+    ];
+
+    const listElement = document.getElementById('internshipList');
+
+    internships.forEach(internship => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `
+            <strong>Title:</strong> ${internship.title}<br>
+            <strong>Company:</strong> Acme Corp<br>
+            <strong>Location:</strong> Whosville<br>
+            <a href="internships/${internship.title.toLowerCase()}.html" target="_blank">More Info</a>
+        `;
+        listElement.appendChild(listItem);
+    });
+</script>
